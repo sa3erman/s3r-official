@@ -1,141 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>S3R - Moroccan Rapper | Official Website</title>
-  <meta name="description" content="Official website of S3R, also known as Sa3er Man, Moroccan rapper. Listen to his music, watch videos and contact for booking." />
-
-  <meta property="og:title" content="S3R - Moroccan Rapper" />
-  <meta property="og:description" content="Official website of S3R, also known as Sa3er Man, Moroccan rapper." />
+  <title>S3R / Sa3er Man - Rappeur marocain | Site officiel</title>
+  <meta name="description" content="Site officiel de S3R, aussi connu sous le nom de Sa3er Man, rappeur marocain. Musique, clips, biographie, press kit et contact professionnel." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="S3R / Sa3er Man - Rappeur marocain" />
+  <meta property="og:description" content="Site officiel de S3R, rappeur marocain aussi connu sous le nom de Sa3er Man." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/s3r-hero.jpg" />
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    :root {
+      --bg:#070707; --soft:#101010; --card:#171717; --text:#fff;
+      --muted:#c8c8c8; --gold:#d6a84f; --gold2:#f4d58a; --border:rgba(255,255,255,.14);
     }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #090909;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    .page {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px 20px;
-      background:
-        radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 30%),
-        linear-gradient(135deg, #090909, #1a1a1a);
-    }
-
-    .card {
-      width: 100%;
-      max-width: 850px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 28px;
-      padding: 40px;
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
-      backdrop-filter: blur(12px);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: #ffffff;
-      color: #000000;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 25px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 9vw, 96px);
-      line-height: 1;
-      margin-bottom: 12px;
-      letter-spacing: -3px;
-    }
-
-    h2 {
-      font-size: clamp(22px, 4vw, 36px);
-      font-weight: 400;
-      color: #d6d6d6;
-      margin-bottom: 25px;
-    }
-
-    p {
-      color: #cfcfcf;
-      font-size: 18px;
-      max-width: 680px;
-      margin-bottom: 28px;
-    }
-
-    .links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin: 30px 0;
-    }
-
-    .links a {
-      text-decoration: none;
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      padding: 13px 18px;
-      border-radius: 14px;
-      transition: 0.2s ease;
-      font-weight: bold;
-    }
-
-    .links a:hover {
-      background: #ffffff;
-      color: #000000;
-    }
-
-    .section {
-      margin-top: 35px;
-      padding-top: 28px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .section h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    .contact {
-      color: #ffffff;
-      font-weight: bold;
-    }
-
-    footer {
-      margin-top: 30px;
-      color: #8d8d8d;
-      font-size: 14px;
-    }
-
-    @media (max-width: 600px) {
-      .card {
-        padding: 28px;
-        border-radius: 22px;
-      }
-
-      .links a {
-        width: 100%;
-        text-align: center;
-      }
-    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:fixed;top:0;width:100%;z-index:50;background:rgba(7,7,7,.84);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:26px;font-weight:900;letter-spacing:2px} .logo span{color:var(--gold)}
+    .nav-links{display:flex;gap:24px;color:var(--muted);font-size:14px;font-weight:800}
+    .nav-links a:hover{color:var(--gold2)}
+    .hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 70px;background:linear-gradient(to right,rgba(0,0,0,.95),rgba(0,0,0,.62)),url('assets/s3r-hero.jpg') center/cover no-repeat}
+    .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}
+    .tag{display:inline-block;padding:8px 14px;border-radius:999px;border:1px solid rgba(214,168,79,.6);color:var(--gold2);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:24px}
+    h1{font-size:clamp(66px,11vw,135px);line-height:.9;letter-spacing:-5px;margin-bottom:18px}
+    .hero h2{font-size:clamp(24px,4vw,42px);font-weight:400;color:var(--muted);margin-bottom:24px}
+    .hero p{max-width:680px;font-size:20px;color:#e8e8e8;margin-bottom:34px}
+    .buttons{display:flex;flex-wrap:wrap;gap:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:14px;font-weight:900;transition:.2s ease}
+    .btn-primary{background:var(--gold);color:#000} .btn-primary:hover{background:var(--gold2);transform:translateY(-2px)}
+    .btn-secondary{border:1px solid var(--border);background:rgba(255,255,255,.06);color:#fff} .btn-secondary:hover{border-color:var(--gold);color:var(--gold2);transform:translateY(-2px)}
+    .artist-card{background:rgba(255,255,255,.08);border:1px solid var(--border);border-radius:30px;padding:22px;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+    .artist-photo{height:520px;border-radius:24px;background:url('assets/s3r-photo.jpg') center/cover no-repeat;border:1px solid var(--border);margin-bottom:18px}
+    .artist-card strong{font-size:24px} .artist-card p{margin-top:8px;color:var(--muted)}
+    section{padding:90px 0} .dark{background:var(--soft)}
+    .section-title{max-width:790px;margin-bottom:38px}
+    .section-title span{color:var(--gold);font-size:13px;text-transform:uppercase;letter-spacing:1px;font-weight:900}
+    .section-title h2{font-size:clamp(34px,5vw,58px);line-height:1.05;margin-top:10px;margin-bottom:16px}
+    .section-title p{color:var(--muted);font-size:18px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .box{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:28px}
+    .box h3{font-size:24px;margin-bottom:12px} .box p,.box li{color:var(--muted)} .box ul{padding-left:18px}
+    .platform{transition:.2s ease} .platform:hover{transform:translateY(-4px);border-color:rgba(214,168,79,.5)} .platform strong{color:var(--gold2)}
+    .video{overflow:hidden;border-radius:26px;border:1px solid var(--border);aspect-ratio:16/9;background:#000}
+    .video iframe{width:100%;height:100%;border:0}
+    .contact-card{background:linear-gradient(135deg,rgba(214,168,79,.24),rgba(255,255,255,.06));border:1px solid rgba(214,168,79,.45);border-radius:30px;padding:44px;display:flex;gap:30px;justify-content:space-between;align-items:center}
+    .contact-card h2{font-size:clamp(32px,5vw,56px);line-height:1.05;margin-bottom:14px} .contact-card p{color:#eee;max-width:680px}
+    footer{padding:34px 0;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    .footer-flex{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:850px){.nav-links{display:none}.hero-grid,.grid-2,.grid-3{grid-template-columns:1fr}.artist-photo{height:420px}.contact-card{display:block}h1{letter-spacing:-3px}}
   </style>
 
   <script type="application/ld+json">
@@ -144,61 +64,121 @@
     "@type": "MusicGroup",
     "name": "S3R",
     "alternateName": "Sa3er Man",
-    "genre": "Moroccan Rap",
-    "description": "S3R, also known as Sa3er Man, is a Moroccan rapper.",
+    "genre": "Rap marocain",
+    "description": "S3R, aussi connu sous le nom de Sa3er Man, est un rappeur marocain originaire de Casablanca.",
     "url": "https://TON-USERNAME.github.io/s3r-official/",
+    "image": "https://TON-USERNAME.github.io/s3r-official/assets/s3r-photo.jpg",
     "sameAs": [
       "https://www.youtube.com/@Sa3erman",
-      "https://www.instagram.com/TON-INSTAGRAM",
-      "https://open.spotify.com/artist/TON-SPOTIFY",
-      "https://www.tiktok.com/@TON-TIKTOK"
+      "https://open.spotify.com/artist/5rGkCkgoWFYOqIheQVxchz",
+      "https://www.instagram.com/sa3ermanofficial"
     ]
   }
   </script>
 </head>
-
 <body>
-  <main class="page">
-    <section class="card">
-      <span class="badge">Official Artist Website</span>
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">S3<span>R</span></a>
+    <nav class="nav-links">
+      <a href="#bio">Bio</a><a href="#musique">Musique</a><a href="#video">Vidéo</a><a href="#press">Press Kit</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="tag">Site officiel artiste</div>
       <h1>S3R</h1>
-      <h2>Also known as Sa3er Man</h2>
-
-      <p>
-        S3R, also known as Sa3er Man, is a Moroccan rapper.
-        This is the official website for his music, videos, news and professional contact.
-      </p>
-
-      <div class="links">
-        <a href="https://www.youtube.com/@Sa3erman" target="_blank">YouTube</a>
-        <a href="https://open.spotify.com/artist/TON-SPOTIFY" target="_blank">Spotify</a>
-        <a href="https://www.instagram.com/TON-INSTAGRAM" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com/@TON-TIKTOK" target="_blank">TikTok</a>
-        <a href="https://music.apple.com/TON-APPLE-MUSIC" target="_blank">Apple Music</a>
+      <h2>Aussi connu sous le nom de Sa3er Man</h2>
+      <p>S3R, aussi connu sous le nom de Sa3er Man, est un rappeur marocain originaire de Casablanca. Son univers mélange rap marocain, énergie de rue, écriture authentique et identité artistique indépendante.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#musique">Écouter maintenant</a>
+        <a class="btn btn-secondary" href="#contact">Contact professionnel</a>
       </div>
+    </div>
+    <div class="artist-card">
+      <div class="artist-photo"></div>
+      <strong>S3R / Sa3er Man</strong>
+      <p>Rappeur marocain · Musique · Clips · Presse · Booking</p>
+    </div>
+  </div>
+</section>
 
-      <div class="section">
-        <h3>Biography</h3>
-        <p>
-          S3R is a Moroccan rap artist creating music inspired by real life,
-          street culture and modern Moroccan rap sounds.
-        </p>
-      </div>
+<section id="bio" class="dark">
+  <div class="container">
+    <div class="section-title">
+      <span>Biographie</span>
+      <h2>Une identité forte dans le rap marocain.</h2>
+      <p>Cette page officielle rassemble les liens vérifiés, la biographie, les clips, les plateformes musicales et le contact professionnel de S3R / Sa3er Man.</p>
+    </div>
+    <div class="grid-2">
+      <div class="box"><h3>À propos</h3><p>S3R est un artiste rap marocain. Aussi connu sous le nom de Sa3er Man, il développe un univers marqué par la réalité sociale, l’ambition, la rue et la culture urbaine marocaine.</p></div>
+      <div class="box"><h3>Identité artiste</h3><ul><li>Nom d’artiste : S3R</li><li>Alias : Sa3er Man</li><li>Genre : Rap marocain</li><li>Origine : Casablanca, Maroc</li><li>Langue artistique : Darija / Arabe marocain</li></ul></div>
+    </div>
+  </div>
+</section>
 
-      <div class="section">
-        <h3>Booking & Contact</h3>
-        <p>
-          For booking, collaborations and professional inquiries:
-          <br />
-          <span class="contact">contact@email.com</span>
-        </p>
-      </div>
+<section id="musique">
+  <div class="container">
+    <div class="section-title">
+      <span>Musique officielle</span>
+      <h2>Écouter S3R sur les plateformes.</h2>
+      <p>Retrouve les sorties, clips et titres officiels de S3R / Sa3er Man.</p>
+    </div>
+    <div class="grid-3">
+      <a class="box platform" href="https://open.spotify.com/artist/5rGkCkgoWFYOqIheQVxchz" target="_blank"><h3>Spotify</h3><p>Profil artiste Spotify officiel de S3R.</p><strong>Ouvrir Spotify →</strong></a>
+      <a class="box platform" href="https://www.youtube.com/@Sa3erman" target="_blank"><h3>YouTube</h3><p>Chaîne YouTube Sa3er Man العندليب.</p><strong>Ouvrir YouTube →</strong></a>
+      <a class="box platform" href="https://www.instagram.com/sa3ermanofficial" target="_blank"><h3>Instagram</h3><p>Profil Instagram associé à Sa3er Man.</p><strong>Ouvrir Instagram →</strong></a>
+    </div>
+  </div>
+</section>
 
-      <footer>
-        © 2026 S3R / Sa3er Man. Official website.
-      </footer>
-    </section>
-  </main>
+<section id="video" class="dark">
+  <div class="container">
+    <div class="section-title">
+      <span>Clip officiel</span>
+      <h2>Dernière vidéo</h2>
+      <p>Remplace l’ID YouTube par l’ID exact du clip que tu veux mettre en avant.</p>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/REMPLACER_VIDEO_ID" title="S3R - Clip officiel" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="press">
+  <div class="container">
+    <div class="section-title">
+      <span>Press kit</span>
+      <h2>Ressources presse et booking.</h2>
+      <p>Section destinée aux médias, journalistes, organisateurs, curateurs de playlists et partenaires professionnels.</p>
+    </div>
+    <div class="grid-3">
+      <div class="box"><h3>Bio officielle</h3><p>Présentation courte de l’univers artistique de S3R / Sa3er Man.</p></div>
+      <div class="box"><h3>Photos artiste</h3><p>Visuels officiels, photos promotionnelles et éléments de communication.</p></div>
+      <div class="box"><h3>Presse</h3><p>Articles, interviews, mentions médias et demandes professionnelles.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="dark">
+  <div class="container">
+    <div class="contact-card">
+      <div><h2>Booking, presse & collaborations</h2><p>Pour toute demande professionnelle, interview, concert, collaboration, partenariat ou booking, contacte l’équipe officielle de S3R / Sa3er Man.</p></div>
+      <a class="btn btn-primary" href="mailto:contact.sa3erman@gmail.com">contact.sa3erman@gmail.com</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-flex">
+    <span>© 2026 S3R / Sa3er Man. Site officiel.</span>
+    <span>Rappeur marocain · Casablanca</span>
+  </div>
+</footer>
 </body>
 </html>
