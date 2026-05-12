@@ -662,3 +662,271 @@ a { color: inherit; text-decoration: none; }
     background-size: cover !important;
   }
 }
+
+
+/* =========================================================
+   FIX ALIGNEMENT DES ICONES + RESPONSIVE
+   À coller tout en bas de style.css
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.listen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.listen-card {
+  min-height: 116px;
+  display: grid;
+  grid-template-columns: 54px 1fr 28px;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.listen-card:hover {
+  transform: translateY(-3px);
+  border-color: #d6a84f;
+  background: rgba(214, 168, 79, 0.08);
+}
+
+.listen-card h3 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.1;
+}
+
+.listen-card p {
+  margin: 5px 0 0;
+  color: #bdbdbd;
+  font-size: 14px;
+}
+
+.listen-icon,
+.side-icon {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 13px;
+  background: #d6a84f;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-arrow,
+.side-arrow {
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  justify-self: end;
+}
+
+.side-links {
+  width: 245px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.side-links-title {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.side-link {
+  min-height: 58px;
+  display: grid;
+  grid-template-columns: 42px 1fr 24px;
+  align-items: center;
+  gap: 12px;
+  padding: 9px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(8px);
+}
+
+.side-link .side-icon {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  font-size: 18px;
+  border-radius: 10px;
+}
+
+.side-link span:nth-child(2) {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/* Desktop : évite les décalages */
+.hero {
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-artist {
+  z-index: 2;
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+  .listen-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .side-links {
+    width: 220px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-bottom: 28px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    padding-top: 30px;
+  }
+
+  .title-main,
+  .hero-content h1 {
+    font-size: clamp(70px, 28vw, 105px);
+    line-height: 0.85;
+    letter-spacing: -3px;
+  }
+
+  .title-sub,
+  .hero-content h2 {
+    font-size: clamp(24px, 8vw, 34px);
+    letter-spacing: 5px;
+  }
+
+  .title-role,
+  .hero-content h3 {
+    font-size: 15px;
+    letter-spacing: 4px;
+  }
+
+  .statement {
+    max-width: 100%;
+  }
+
+  .statement p {
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .cta-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .cta-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .side-links {
+    position: static !important;
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .side-link {
+    width: 100%;
+  }
+
+  .hero-artist {
+    position: relative !important;
+    width: 100% !important;
+    height: 330px !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-top: 22px;
+    background-position: center top !important;
+    background-size: cover !important;
+  }
+
+  .bottom-section {
+    position: relative !important;
+    padding: 30px 16px;
+  }
+
+  .bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .listen-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .listen-card {
+    grid-template-columns: 52px 1fr 24px;
+    min-height: 98px;
+  }
+}
+
+/* Petit mobile */
+@media (max-width: 420px) {
+  .hero {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .listen-card {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .listen-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    font-size: 20px;
+  }
+
+  .listen-card h3 {
+    font-size: 19px;
+  }
+
+  .side-links-title {
+    font-size: 19px;
+  }
+}
